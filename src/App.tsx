@@ -8,6 +8,7 @@ import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/useGames";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
+import AlertBox from "./components/AlertBox";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -28,6 +29,8 @@ function App() {
         base: "1fr",
         lg: "200px 1fr",
       }}
+      marginLeft={{ sm: "10", lg: "20" }}
+      marginRight={{ sm: "10", lg: "20" }}
     >
       <GridItem area="nav">
         <NavBar
@@ -44,6 +47,7 @@ function App() {
       </Show>
       <GridItem area="main">
         <Box paddingLeft={2}>
+          <AlertBox />
           <GameHeading gameQuery={gameQuery} />
           <Flex marginBottom={4}>
             <Box marginRight={2}>

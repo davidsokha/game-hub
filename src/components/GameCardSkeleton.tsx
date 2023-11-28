@@ -4,7 +4,7 @@ import React from "react";
 const GameCardSkeleton = () => {
   return (
     <Card>
-      <Skeleton height="200px" />
+      <Skeleton height={{ md: "300px", lg: "300px", xl: "400px" }} />
       <CardBody>
         <SkeletonText />
       </CardBody>

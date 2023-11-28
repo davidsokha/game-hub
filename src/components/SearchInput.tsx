@@ -15,13 +15,21 @@ const SearchInput = ({ onSearch }: Props) => {
         if (ref.current) onSearch(ref.current.value);
       }}
     >
-      <InputGroup>
-        <InputLeftElement children={<BsSearch />} />
+      <InputGroup height="50px">
+        <InputLeftElement
+          children={<BsSearch size={20} />}
+          pos="absolute"
+          top="1"
+          left="0"
+          marginLeft={2}
+        />
         <Input
           ref={ref}
-          borderRadius={20}
-          placeholder="Search games..."
+          borderRadius="full"
+          placeholder="Search 859,596 games"
+          focusBorderColor="white"
           variant="filled"
+          size="lg"
         />
       </InputGroup>
     </form>

@@ -33,7 +33,7 @@ const PlatformIconList = ({ platforms }: Props) => {
     <Wrap marginY={2}>
       {platforms.map((platform) => (
         <WrapItem key={platform.id}>
-          <Icon as={iconMap[platform.slug]} color="gray.500" />
+          <Icon as={iconMap[platform.slug]} />
         </WrapItem>
       ))}
     </Wrap>
